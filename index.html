@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Le School in React</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h1>Le School</h1>
+    <div id="root">
+
+    </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"> </script>
+    <script type="text/javascript" src="data/grades.json"></script> 
+    <!-- 
+    <script type="text/babel">
+    <script>
+    -->
+    <script type="text/babel">
+    // The data, an array of student objects
+    var data = fdata;
+
+    // A function component for an individual's Average
+    function StudentAverage(prop) {
+      return(
+      <div className="studentAverage">
+        <p>His average for the class is: {prop.scores.reduce(
+        (total, num) => total + num )}</p>
+      </div>
+      );
+    } 
+
+
+    // A function component for listing a student's scores
+    function StudentScores(prop) {
+      return(
+      <ul className="scores">
+        {prop.scores.map((score, i) => ( 
+          <li key={i}>{score}</li>))}
+      </ul>
+      );
+    } 
+
+
+
+    // A function component for a class detail with roster and scores.
+    function Students({classe, students}) {
+      return (
+        <section className="eachClass"  id={classe.toLowerCase().replace(/ /g, "-")}>
+          <h1>{classe}</h1>
+          <section className="roster">
+            {students.map((student, i) => (
+              <div className="student">
+              <>
+              <p>{student.name}'s  test Scores</p>
+              <StudentScores scores = {student.scores} />
+              <StudentAverage scores = {student.scores} />
+              </>
+              </div>
+            ))}
+          </section>
+        </section>
+      );
+    }
+    // A function component for displaying all classes
+    function ClassDetails (props) {
+      return (
+        <article>
+          <header>
+            <h1>{props.title}</h1>
+          </header>
+          <div className="allClasses">
+          {props.details.map((detail, i) => (
+            <Students key={i}
+              classe={detail.classe}
+              students={detail.students}
+            />
+          ))}
+          </div>
+        </article>
+      );
+    }
+    // A call to ReactDOM.render to render our  school data
+    ReactDOM.render(
+      <ClassDetails details={data} title="Grades for Akademi Sivik Sivik Course" />,
+      document.getElementById("root") );
+    </script>
+  </body>
+</html>

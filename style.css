@@ -1,0 +1,27 @@
+* {box-sizing: border-box;}
+body {
+  padding: 20px;
+  background-color: #ccc;
+}
+
+.eachClass {
+  width: 900px;
+  background-color: rgba(0, 0, 128, 4);
+  color: tan;
+  border: 5px solid rgba(0, 0, 128, .7);
+  border-radius: .5em;
+  padding: 10px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.student {
+  border: 3px solid rgba(0, 255, 0, .6);
+  border-radius: .5em;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(0, 255, 0, 0.5);
+  display: inline-block;
+}
+
+

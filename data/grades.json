@@ -1,0 +1,25 @@
+fdata = [
+    {
+        "classe": "7eme A",
+        "students": [
+            { "name": "Booki Pyan", "age": 5, "scores": [10, 10, 7] }, 
+            { "name": "tiMalice Rico", "age": 5, "scores": [9, 10, 7] }
+        ]
+    },
+    {
+        "classe": "8eme A",
+        "students": [
+            { "name": "Toto Nc6t", "age": 5, "scores": [10, 10, 7] },
+            { "name": "Banda Bel", "age": 5, "scores": [8, 8, 7] },
+        ]
+    },
+    {
+        "classe": "9eme A",
+        "students": [
+            { "name": "Yaya Ui", "age": 5, "scores": [10, 10, 7] }, 
+            { "name": "Ti Roro Pitita", "age": 5, "scores": [8, 8, 7] }, 
+            { "name": "Neg Lespri ", "age": 5, "scores": [3, 8, 7] }, 
+            { "name": "Banda Papa", "age": 5, "scores": [8, 8, 10, 10] }, 
+        ]
+    }
+]

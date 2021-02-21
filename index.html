@@ -24,10 +24,11 @@
 
     // A function component for an individual's Average
     function StudentAverage(prop) {
+      let q = prop.scores.length;
       return(
       <div className="studentAverage">
         <p>His average for the class is: {prop.scores.reduce(
-        (total, num) => total + num )}</p>
+        (total , num) => total + num )/q }</p>
       </div>
       );
     } 
